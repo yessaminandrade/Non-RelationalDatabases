@@ -55,3 +55,14 @@ Integrated deliverables from Sprints 1–3, plus analysis/results (PDF) and a vi
 - Y (Features) – New functionality.
 
 - Z (Fixes) – Bug fixes/minor corrections.
+
+# Restaurant Directory – Sprint 1 (MongoDB)
+
+This repository contains the **database setup** for a restaurant directory platform.  
+Sprint 1 focuses on MongoDB modeling, initial data, indexes, and a reusable backup.
+
+## Tech stack
+- **MongoDB Community** (local)
+- **MongoDB Compass** / **mongosh**
+- (Coming next sprints) Node.js + Express for the REST API
+
