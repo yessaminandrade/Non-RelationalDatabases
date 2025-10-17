@@ -1,0 +1,17 @@
+use('restaurant_db');
+
+// restaurants
+db.restaurants.createIndex({ city: 1 });
+db.restaurants.createIndex({ cuisine: 1 });
+db.restaurants.createIndex({ name: 1 }, { unique: true }); // opcional
+
+// users
+db.users.createIndex({ email: 1 }, { unique: true });
+
+// reviews
+db.reviews.createIndex({ restaurant_id: 1 });
+db.reviews.createIndex({ user_id: 1 });
+db.reviews.createIndex({ restaurant_id: 1, user_id: 1 }, { unique: true }); // evita 2 reseñas del mismo usuario al mismo restaurante
+
+// favorites (si lo usas)
+db.favorites.createIndex({ user_id: 1, restaurant_id: 1 }, { unique: true });

@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "68f11be2bdba35000cadfdf3"
+  },
+  "name": "Ana Pérez",
+  "email": "ana@example.com",
+  "city": "Lima",
+  "preferences": {
+    "cuisine": [
+      "vegan",
+      "peruvian"
+    ],
+    "price_max": 2
+  },
+  "created_at": {
+    "$date": "2025-01-06T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68f11befbdba35000cadfdf5"
+  },
+  "name": "Luis Gómez",
+  "email": "luis@example.com",
+  "city": "Arequipa",
+  "preferences": {
+    "cuisine": [
+      "japanese"
+    ],
+    "price_max": 3
+  },
+  "created_at": {
+    "$date": "2025-01-06T12:00:00.000Z"
+  }
+}]

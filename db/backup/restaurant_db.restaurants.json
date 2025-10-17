@@ -1,0 +1,124 @@
+[{
+  "_id": {
+    "$oid": "68f11ae9bdba35000cadfde6"
+  },
+  "name": "La Trattoria",
+  "city": "Lima",
+  "address": "Av. Primavera 123",
+  "coords": {
+    "lat": -12.104,
+    "lng": -77.035
+  },
+  "cuisine": [
+    "italian",
+    "pasta"
+  ],
+  "price_level": 2,
+  "avg_rating": 4.3,
+  "tags": [
+    "family",
+    "cozy"
+  ],
+  "created_at": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68f11b15bdba35000cadfde8"
+  },
+  "name": "Sushi Go",
+  "city": "Lima",
+  "address": "Calle Alcanfores 456",
+  "coords": {
+    "lat": -12.117,
+    "lng": -77.029
+  },
+  "cuisine": [
+    "japanese",
+    "sushi"
+  ],
+  "price_level": 3,
+  "avg_rating": 4.6,
+  "tags": [
+    "fresh",
+    "delivery"
+  ],
+  "created_at": {
+    "$date": "2025-01-02T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68f11b21bdba35000cadfdea"
+  },
+  "name": "El Ají Seco",
+  "city": "Arequipa",
+  "address": "Jr. Misti 789",
+  "coords": {
+    "lat": -16.409,
+    "lng": -71.537
+  },
+  "cuisine": [
+    "peruvian"
+  ],
+  "price_level": 1,
+  "avg_rating": 4.1,
+  "tags": [
+    "menu",
+    "local"
+  ],
+  "created_at": {
+    "$date": "2025-01-03T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68f11b51bdba35000cadfdec"
+  },
+  "name": "Green Bite",
+  "city": "Cusco",
+  "address": "Calle Saphy 22",
+  "coords": {
+    "lat": -13.516,
+    "lng": -71.978
+  },
+  "cuisine": [
+    "vegan",
+    "healthy"
+  ],
+  "price_level": 2,
+  "avg_rating": 4.4,
+  "tags": [
+    "vegan",
+    "cozy"
+  ],
+  "created_at": {
+    "$date": "2025-01-04T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68f11b5ebdba35000cadfdee"
+  },
+  "name": "Burger Lab",
+  "city": "Lima",
+  "address": "Av. La Mar 2020",
+  "coords": {
+    "lat": -12.098,
+    "lng": -77.057
+  },
+  "cuisine": [
+    "burgers",
+    "american"
+  ],
+  "price_level": 2,
+  "avg_rating": 4,
+  "tags": [
+    "fast",
+    "casual"
+  ],
+  "created_at": {
+    "$date": "2025-01-05T00:00:00.000Z"
+  }
+}]

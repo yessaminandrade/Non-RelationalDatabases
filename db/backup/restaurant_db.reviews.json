@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "68f11da5dd1c8bbf58272b1e"
+  },
+  "restaurant_id": {
+    "$oid": "68f11b15bdba35000cadfde8"
+  },
+  "user_id": {
+    "$oid": "68f11be2bdba35000cadfdf3"
+  },
+  "rating": 5,
+  "title": "Excelente experiencia",
+  "comment": "El sushi estuvo fresco y el servicio muy rápido.",
+  "tags": [
+    "sushi",
+    "rápido",
+    "amable"
+  ],
+  "visited_at": {
+    "$date": "2025-01-05T20:00:00.000Z"
+  },
+  "created_at": {
+    "$date": "2025-01-06T10:15:00.000Z"
+  },
+  "helpful_votes": 2
+},
+{
+  "_id": {
+    "$oid": "68f11da5dd1c8bbf58272b1f"
+  },
+  "restaurant_id": {
+    "$oid": "68f11b15bdba35000cadfde8"
+  },
+  "user_id": {
+    "$oid": "68f11befbdba35000cadfdf5"
+  },
+  "rating": 4,
+  "title": "Muy bueno",
+  "comment": "Buen sabor y variedad, aunque el local estaba lleno.",
+  "tags": [
+    "sabor",
+    "variedad"
+  ],
+  "visited_at": {
+    "$date": "2025-01-04T19:30:00.000Z"
+  },
+  "created_at": {
+    "$date": "2025-01-06T12:40:00.000Z"
+  },
+  "helpful_votes": 0
+}]
