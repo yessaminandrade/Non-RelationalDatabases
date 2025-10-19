@@ -1,29 +1,37 @@
-require('dotenv').config();
+require('dotenv').config(); // lee .env
 const express = require('express');
 const cors = require('cors');
 
-const { connect } = require('./db');
+const { connectDB } = require('./db');
+const restaurantsRoutes = require('./routes/restaurants.routes');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Health check
-app.get('/health', (req, res) => {
+// Healthcheck
+app.get('/health', (_req, res) => {
   res.json({ ok: true, service: 'api', ts: Date.now() });
 });
 
-// Rutas
-const restaurantsRoutes = require('./routes/restaurants.routes');
-app.use('/api', restaurantsRoutes);
+// Mount /restaurants
+app.use('/restaurants', restaurantsRoutes);
 
-const PORT = process.env.PORT || 3000;
+// 404 para rutas no encontradas
+app.use((req, res) => {
+  res.status(404).json({ error: 'not_found', path: req.originalUrl });
+});
 
-connect()
+// Arranque del servidor tras conectar a la BD
+const PORT = Number(process.env.PORT || 3000);
+connectDB()
   .then(() => {
-    app.listen(PORT, () => console.log(`[API] running on http://localhost:${PORT}`));
+    app.listen(PORT, () => {
+      console.log(`[API] running on http://localhost:${PORT}`);
+    });
   })
-  .catch((err) => {
+  .catch(err => {
     console.error('[DB] connection error:', err);
     process.exit(1);
   });
+

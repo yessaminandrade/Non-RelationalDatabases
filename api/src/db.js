@@ -1,18 +1,40 @@
+// Conexión simple a MongoDB usando el driver nativo
 const { MongoClient } = require('mongodb');
 
 const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
-const DB_NAME = process.env.DB_NAME || 'restaurant_db';
+const dbName = process.env.DB_NAME || 'restaurant_db';
 
-const client = new MongoClient(uri, { ignoreUndefined: true });
-
+let client;
 let db;
-async function connect() {
-  if (!db) {
-    await client.connect();
-    db = client.db(DB_NAME);
-    console.log('[DB] Connected to', DB_NAME);
-  }
+
+/**
+ * Conecta una sola vez y reutiliza la conexión.
+ */
+async function connectDB() {
+  if (db) return db;
+  client = new MongoClient(uri);
+  await client.connect();
+  db = client.db(dbName);
+  console.log(`[DB] Connected to ${dbName}`);
   return db;
 }
 
-module.exports = { connect, client };
+/**
+ * Devuelve la instancia de DB (asegurando conexión previa).
+ */
+async function getDB() {
+  if (!db) await connectDB();
+  return db;
+}
+
+/**
+ * Helper: devuelve la colección pedida (asegura conexión).
+ * @param {string} name
+ */
+async function col(name) {
+  const database = await getDB();
+  return database.collection(name);
+}
+
+module.exports = { connectDB, getDB, col };
+

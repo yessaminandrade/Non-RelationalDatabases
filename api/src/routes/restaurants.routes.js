@@ -1,6 +1,12 @@
-const router = require('express').Router();
-const { listRestaurants } = require('../controllers/restaurants.controller');
+// Rutas de restaurantes
+const express = require('express');
+const router = express.Router();
 
-router.get('/restaurants', listRestaurants);
+const { listRestaurants } = require('../controllers/restaurants.controller');
+const { validateSearch } = require('../validators/restaurants.search.schema');
+
+// Endpoint de búsqueda
+router.get('/search', validateSearch, listRestaurants);
 
 module.exports = router;
+
